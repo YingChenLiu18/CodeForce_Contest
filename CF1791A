@@ -1,0 +1,49 @@
+/*
+1791-A. Codeforces Checking
+https://codeforces.com/contest/1791/problem/A
+
+Question Description;
+Given a lowercase Latin character (letter), check if it appears in the string 𝚌𝚘𝚍𝚎𝚏𝚘𝚛𝚌𝚎𝚜.
+
+Input:
+The first line of the input contains an integer (1 ≤ 𝑡 ≤ 26) — the number of test cases.
+The only line of each test case contains a character 𝑐 — a single lowercase Latin character (letter).
+
+Output:
+For each test case, output "YES" (without quotes) if 𝑐 satisfies the condition, and "NO" (without quotes) otherwise.
+You can output the answer in any case (for example, the strings "yEs", "yes", "Yes" and "YES" will be recognized as a positive answer).
+*/
+
+
+/*
+ Solution Ideas:
+ 
+ 1.Create variable(String) s, which is  "codeforces".
+ 2.Get the number of test cases
+ 3.For each test, we can get the character of input, if s contains input variable then print "Yes", otherwise, print "NO".
+ 
+ Time Complexity: O(1);
+ Space Complexity: O(1)
+*/
+
+
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        int test_case = Integer.parseInt(scanner.nextLine());
+        String s = "codeforces";
+
+        for(int i = 0; i < test_case; i++){
+            String temp = scanner.nextLine();
+            if(s.contains(temp)){
+                System.out.println("YES");
+            }
+            else{
+                System.out.println("NO");
+            }
+        }
+
+    }
+}
